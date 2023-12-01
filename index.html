@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<div class="container">
+<div class="left-content">
+  <h1>Stay Updated!</h1>
+  <p>Join 6000+ product managers reeceiving monthly updates on:
+    <div class="inner-text">
+      <div class="para"><img class="alt" src="assets/images/icon-list.svg" alt="tick"><span>Product discovery and building what matters</span></div>
+      <div class="para"><img class="alt" src="assets/images/icon-list.svg" alt="tick"><span>Measuring to ensure updates are success</span></div>
+      <div class="para"><img class="alt" src="assets/images/icon-list.svg" alt="tick"><span>And much more!</span></div>
+    </div>
+    <form action="#">
+      <p class="t">Email address</p class="t">
+      <input type="email" placeholder="email@company.com">
+      <button class="btn">Subscribe to monthly newsletter</button>
+    </form>
+  </p>
+</div>
+<div class="right-side">
+  <img class="left-img" src="assets/images/illustration-sign-up-desktop.svg" alt="img">
+</div>
+</div>
+<div class="success">
+  <img class="icon" src="assets/images/icon-list.svg" alt="list">
+  <h1>Thanks for subscribing!</h1>
+  <p class="pest">A confirmation email has been sent to your email account. Please open it and click on the button inside to confirm your subscribtion</p>
+  <button class="btn extra">Dismiss message</button>
+</div>
+<script>
+  const container = document.querySelector('.container') 
+  const submit = document.querySelector('.success') 
+  const input = document.querySelector('input') 
+  const success = document.querySelector('.btn')
+  const extra = document.querySelector('.extra')
+  success.addEventListener('click', function(e){
+    e.preventDefault()
+    if(!input.value === ''){
+      container.style.display = 'none'
+    }else{
+      container.style.display = 'none'
+    }
+    submit.style.display = 'block'
+//     const html = `
+//     <!-- <div class="success">
+//   <img class="icon" src="assets/images/icon-list.svg" alt="list">
+//   <h1>Thanks for subscribing!</h1>
+//   <p class="pest">A confirmation email has been sent to your email account. Please open it and click on the button inside to confirm your subscribtion</p>
+//   <button class="btn extra">Dismiss message</button>
+// </div> -->
+//     `
+//     const markup = 
+  })
+  extra.addEventListener('click', function(e){
+      location.reload()
+      e.preventDefault()
+  })
+</script>
+</body>
+</html>
